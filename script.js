@@ -20,8 +20,24 @@ document.addEventListener('keyup', pulo)
 
 botao.addEventListener('click', iniciar)
 reset.addEventListener('click', reiniciar)
-
+jogo.addEventListener('click', clickPulo)
 // Funções
+
+function clickPulo(){
+   
+    sonic.classList.add('pulo')
+    sonic.src = './imagens/pulo.gif'
+    
+    setTimeout(()=>{
+        sonic.classList.remove('pulo')
+        sonic.src = './imagens/sonic.gif'
+        pontos++
+        score.innerHTML = `${pontos} Pontos`
+    }, 1000)
+    
+
+    
+}
 
 
 function pulo(e){
